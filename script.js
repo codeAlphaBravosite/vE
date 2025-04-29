@@ -360,7 +360,10 @@ try:
                  closed_count += 1
         except Exception as e_close:
             print(f"  Error closing an intermediate clip: {e_close}")
-    print(f"  Closed {closed_count} tracked intermediate clips.")
+    # Using string concatenation:
+print("  Closed " + str(closed_count) + " tracked intermediate clips.")
+# Or using .format():
+# print("  Closed {} tracked intermediate clips.".format(closed_count))
 
     # Note: Clips inside 'processed_clips' are references managed by CompositeVideoClip,
     # closing the final_video *should* handle them, but manual closure of intermediates is safer.
