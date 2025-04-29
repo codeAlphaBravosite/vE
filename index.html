@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Preview & Colab Exporter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Visual Preview & Colab Exporter</h1>
+
+    <div class="controls">
+        <button id="selectFilesBtn">Select Photos/Videos</button>
+        <input type="file" id="fileInput" multiple accept="image/*,video/*" style="display: none;">
+         <span id="fileCount">0 files selected</span>
+    </div>
+
+    <h2>Preview</h2>
+    <div id="previewGrid">
+        <!-- Preview items will be added here by JavaScript -->
+    </div>
+
+    <h2>Export</h2>
+    <div class="export-section">
+        <button id="generateScriptBtn" disabled>Generate Colab Script</button>
+        <p>Click the button above. Then, copy the script below, open Google Colab, paste the script, **upload the EXACT SAME files you selected above to your Colab session**, and run the script cells.</p>
+        <textarea id="pythonScriptOutput" rows="20" placeholder="Python script for Google Colab will appear here..." readonly></textarea>
+        <button id="copyScriptBtn" disabled>Copy Script</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
