@@ -1,0 +1,159 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="file"],
+input[type="number"] {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+#copyBtn {
+    background-color: #f0ad4e;
+    margin-left: 10px; /* Space it from the textarea */
+    display: block; /* Put it below textarea */
+    margin-top: 10px;
+}
+
+#copyBtn:hover {
+    background-color: #eea236;
+}
+
+#copyBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+.hidden {
+    display: none;
+}
+
+#feedback ul {
+    list-style: disc;
+    margin-left: 20px;
+    background-color: #eef;
+    padding: 10px;
+    border: 1px dashed #aaf;
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#feedback li {
+    word-break: break-all; /* Prevent long filenames overflowing */
+}
+
+.warning {
+    color: #a94442;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.script-container {
+    position: relative; /* For potential absolute positioning inside if needed */
+}
+
+#scriptOutput {
+    width: 98%; /* Slightly less than 100% */
+    padding: 10px;
+    font-family: monospace;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e9e9e9;
+    white-space: pre; /* Important for Python indentation */
+    overflow: auto; /* Add scrollbars if needed */
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+    font-size: 0.9em;
+}
+
+a {
+    color: #337ab7;
+}
+
+a:hover {
+    color: #23527c;
+}
+
+ol li {
+    margin-bottom: 8px;
+}

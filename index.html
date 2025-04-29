@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Video Script Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Intro Video Script Generator (for Google Colab)</h1>
+    </header>
+
+    <main>
+        <section id="instructions">
+            <h2>How it Works:</h2>
+            <ol>
+                <li>Select the photos and videos you want in the intro grid.</li>
+                <li>Enter the total desired duration for the intro video (in seconds).</li>
+                <li>Click "Generate Script".</li>
+                <li>The app will show you the detected filenames (<strong>Important!</strong>) and generate a Python script.</li>
+                <li>Copy the generated Python script.</li>
+                <li>Open Google Colab (<a href="https://colab.research.google.com/" target="_blank">colab.research.google.com</a>).</li>
+                <li>In Colab, use the 'Files' tab on the left to upload the <strong>exact same photos/videos</strong> with the <strong>exact same filenames</strong> (case-sensitive!). Optionally, also upload `narration.mp3` and `background_music.mp3` if you want audio.</li>
+                <li>Paste the copied script into a Colab code cell and run it.</li>
+                <li>Wait for Colab to process (it might take minutes).</li>
+                <li>Download the final `final_intro.mp4` from Colab's file browser.</li>
+            </ol>
+        </section>
+
+        <section id="inputs">
+            <h2>Step 1: Provide Files & Duration</h2>
+            <div>
+                <label for="fileInput">Select Photos/Videos (Max 6 for 3x2 grid):</label>
+                <input type="file" id="fileInput" multiple accept="image/*,video/*">
+            </div>
+            <div>
+                <label for="durationInput">Total Video Duration (seconds):</label>
+                <input type="number" id="durationInput" min="1" value="10"> <!-- Default 10s -->
+            </div>
+            <button id="generateBtn">Generate Script</button>
+        </section>
+
+        <section id="feedback" class="hidden">
+             <h2>Step 2: Verify Files & Duration</h2>
+             <p><strong>Detected Files (Upload these EXACT names to Colab):</strong></p>
+             <ul id="fileList"></ul>
+             <p><strong>Selected Duration:</strong> <span id="durationDisplay"></span> seconds</p>
+             <p class="warning">Make sure the filenames above match EXACTLY (including upper/lower case) what you upload to Colab!</p>
+        </section>
+
+        <section id="output" class="hidden">
+            <h2>Step 3: Copy the Python Script</h2>
+            <p>Paste this entire script into a Google Colab cell and run it.</p>
+            <div class="script-container">
+                <textarea id="scriptOutput" readonly rows="20"></textarea>
+                <button id="copyBtn" title="Copy Script to Clipboard">Copy Script</button>
+            </div>
+        </section>
+
+         <section id="colab-instructions" class="hidden">
+            <h2>Step 4: Google Colab Actions</h2>
+            <ol>
+                <li>Go to <a href="https://colab.research.google.com/" target="_blank">Google Colab</a> and start a new notebook.</li>
+                <li>Click the 'Folder' icon on the left sidebar to open the 'Files' tab.</li>
+                <li>Click the 'Upload' icon (📄⬆️) and upload the files listed in Step 2 above. (Also upload `narration.mp3` or `background_music.mp3` if desired).</li>
+                <li>Create a new code cell (+) in the notebook.</li>
+                <li>Paste the script you copied into the cell.</li>
+                <li>Run the cell (click the play button ▶️ or press Shift+Enter).</li>
+                <li>Wait for the process to complete (monitor output below the cell).</li>
+                <li>Once finished, find `final_intro.mp4` in the 'Files' tab, right-click it, and choose 'Download'.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built based on the specified workflow.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
